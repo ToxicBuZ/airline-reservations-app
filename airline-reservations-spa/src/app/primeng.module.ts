@@ -4,6 +4,8 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
+import { TableModule } from 'primeng/table';
+import { TabViewModule } from 'primeng/tabview';
 import { ToastModule } from 'primeng/toast';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
@@ -14,6 +16,8 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
     CardModule,
     MessagesModule,
     MessageModule,
+    TableModule,
+    TabViewModule,
     ToastModule,
     ProgressSpinnerModule,
   ],

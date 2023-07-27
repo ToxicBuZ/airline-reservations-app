@@ -1,14 +1,19 @@
 <div id="login-container">
-  <div id="login-header">
-    <h1 id="login-card-header">Airline Reservations App</h1>
+  <p-card>
+    <h1 id="login-card-header">Airline Info</h1>
     <input
       pInputText
-      id="login-input"
+      id="login-card-input"
       placeholder="Please enter your API key..."
       type="text"
     />
     <p-button label="Submit" (onClick)="onSubmit()"></p-button>
-  </div>
+    <h6 id="login-card-footer">
+      <a href="https://github.com/ToxicBuZ" target="_blank"
+        >by Emmanouil Chondrakis</a
+      >
+    </h6>
+  </p-card>
 </div>
 
-<p-toast position="bottom-right"></p-toast>
+<p-toast position="top-right"></p-toast>
