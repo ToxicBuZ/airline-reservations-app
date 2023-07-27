@@ -1,0 +1,187 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Body>
+        <RetrievePNRResponse xmlns="http://tempuri.org/">
+            <RetrievePNRResult xmlns:a="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"
+                xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                <a:Key>299:192523</a:Key>
+                <a:SeriesNumber>299</a:SeriesNumber>
+                <a:ConfirmationNumber>192523</a:ConfirmationNumber>
+                <a:BookingAgent>gds</a:BookingAgent>
+                <a:CRSCode/>
+                <a:TravelGroupID>0</a:TravelGroupID>
+                <a:IATANumber>xxxx</a:IATANumber>
+                <a:ExternalAppID/>
+                <a:WebBookingID/>
+                <a:PromotionalID>0</a:PromotionalID>
+                <a:PromotionalCode i:nil="true"/>
+                <a:RecieptLanguageID>0</a:RecieptLanguageID>
+                <a:ReservationCurrency>EUR</a:ReservationCurrency>
+                <a:ProfileID>-9223372036854775808</a:ProfileID>
+                <a:PNRPin>4707878</a:PNRPin>
+                <a:BookDate>2022-06-10T20:36:34</a:BookDate>
+                <a:ReservationType>STANDARD</a:ReservationType>
+                <a:TodaysDate>2022-09-30T10:47:05.1509504+00:00</a:TodaysDate>
+                <a:LastModified>2022-07-14T02:02:20</a:LastModified>
+                <a:ReservationExpirationDate>0001-01-01T00:00:00</a:ReservationExpirationDate>
+                <a:CorporationID/>
+                <a:SecurityGuid/>
+                <a:HasTickets>true</a:HasTickets>
+                <a:ValuePackageData i:nil="true"/>
+                <a:UserIPAddress i:nil="true"/>
+                <a:ManageBookingAgent i:nil="true"/>
+                <a:HistoricConfirmationNum/>
+                <a:Cabin>ECONOMY</a:Cabin>
+                <a:ReservationBalance>0.00</a:ReservationBalance>
+                <a:ChangeFee>0</a:ChangeFee>
+                <a:LogicalFlightCount>1</a:LogicalFlightCount>
+                <a:ActivePassengerCount>2</a:ActivePassengerCount>
+                <a:BalancedReservation>true</a:BalancedReservation>
+                <a:ReservationFulfillmentRequiredByGMT>0001-01-01T00:00:00</a:ReservationFulfillmentRequiredByGMT>
+                <a:ReservationFulfillmentRequiredByODT>0001-01-01T00:00:00</a:ReservationFulfillmentRequiredByODT>
+                <a:Airlines>
+                    <a:Airline>
+                        <a:Key i:nil="true"/>
+                        <a:LogicalFlight>
+                            <a:LogicalFlight>
+                                <a:Key>1151089:7/14/2022 11:55:00 AM</a:Key>
+                                <a:RecordNumber>0</a:RecordNumber>
+                                <a:LogicalFlightID>1151089</a:LogicalFlightID>
+                                <a:DepartureDate>2022-07-14T00:00:00</a:DepartureDate>
+                                <a:Origin>JTR </a:Origin>
+                                <a:OriginDefaultTerminal/>
+                                <a:OriginName>Santorini Airport</a:OriginName>
+                                <a:Destination>ATH </a:Destination>
+                                <a:DestinationDefaultTerminal/>
+                                <a:DestinationName>Eleftherios Venizelos Airport</a:DestinationName>
+                                <a:OriginMetroGroup>JTR </a:OriginMetroGroup>
+                                <a:DestinationMetroGroup>ATH </a:DestinationMetroGroup>
+                                <a:SellingCarrier>GQ </a:SellingCarrier>
+                                <a:OperatingCarrier>GQ </a:OperatingCarrier>
+                                <a:OperatingFlightNumber>345</a:OperatingFlightNumber>
+                                <a:DepartureTime>2022-07-14T11:55:00</a:DepartureTime>
+                                <a:Arrivaltime>2022-07-14T12:50:00</a:Arrivaltime>
+                                <a:PackageItemID>-2147483648</a:PackageItemID>
+                                <a:PackageItemName i:nil="true"/>
+                                <a:PackageItemDescription i:nil="true"/>
+                                <a:PackageItemBookDate>0001-01-01T00:00:00</a:PackageItemBookDate>
+                                <a:PackageItemStartDate>0001-01-01T00:00:00</a:PackageItemStartDate>
+                                <a:PackageItemEndDate>0001-01-01T00:00:00</a:PackageItemEndDate>
+                                <a:VendorId>-2147483648</a:VendorId>
+                                <a:VendorName i:nil="true"/>
+                                <a:Active>true</a:Active>
+                                <a:VendorDescription i:nil="true"/>
+                                <a:UIDisplayValue>-2147483648</a:UIDisplayValue>
+                                <a:PhysicalFlights>
+                                    <a:PhysicalFlight>
+                                        <a:Key>1151089:197420:7/14/2022 11:55:00 AM</a:Key>
+                                        <a:RecordNumber>0</a:RecordNumber>
+                                        <a:DestinationDefaultTerminal/>
+                                        <a:PhysicalFlightID>197420</a:PhysicalFlightID>
+                                        <a:LogicalFlightID>1151089</a:LogicalFlightID>
+                                        <a:CarrierCode>GQ </a:CarrierCode>
+                                        <a:CarrierName/>
+                                        <a:FlightNumber>345</a:FlightNumber>
+                                        <a:FlightOrder>1</a:FlightOrder>
+                                        <a:DepartureDate>2022-07-14T11:55:00</a:DepartureDate>
+                                        <a:Origin>JTR </a:Origin>
+                                        <a:OriginDefaultTerminal/>
+                                        <a:OriginName>Santorini Airport</a:OriginName>
+                                        <a:Destination>ATH </a:Destination>
+                                        <a:DestinationName>Eleftherios Venizelos Airport</a:DestinationName>
+                                        <a:OriginMetroGroup>JTR</a:OriginMetroGroup>
+                                        <a:DestinationMetroGroup>ATH</a:DestinationMetroGroup>
+                                        <a:SellingCarrier>GQ </a:SellingCarrier>
+                                        <a:OperatingCarrier>GQ</a:OperatingCarrier>
+                                        <a:OperatingFlightNumber>345</a:OperatingFlightNumber>
+                                        <a:DepartureTime>2022-07-14T11:55:00</a:DepartureTime>
+                                        <a:Arrivaltime>2022-07-14T12:50:00</a:Arrivaltime>
+                                        <a:FlightDuration>3300</a:FlightDuration>
+                                        <a:Trip>-2147483648</a:Trip>
+                                        <a:Gate/>
+                                        <a:TotalWeight>0</a:TotalWeight>
+                                        <a:UIDisplayValue>-2147483648</a:UIDisplayValue>
+                                        <a:Active>false</a:Active>
+                                        <a:Customers>
+                                            <a:Customer>
+                                                <a:Key>8733b0c8-8a6f-4145-a030-f4148c67f4d7</a:Key>
+                                                <a:AirlinePersons>                                                   
+                                                </a:AirlinePersons>
+                                            </a:Customer>
+                                        </a:Customers>
+                                        <a:FromTerminal/>
+                                        <a:ToTerminal/>
+                                        <a:AirCraftType>AT7</a:AirCraftType>
+                                        <a:AirCraftDescription>ATR72 500</a:AirCraftDescription>
+                                        <a:UTCDepartureOffset>3</a:UTCDepartureOffset>
+                                        <a:UTCArrivalOffset>3</a:UTCArrivalOffset>
+                                    </a:PhysicalFlight>
+                                </a:PhysicalFlights>
+                                <a:FlightDisruptionAlert>EQ</a:FlightDisruptionAlert>
+                            </a:LogicalFlight>
+                        </a:LogicalFlight>
+                        <a:OAFlights>
+                            <a:OAFlight>
+                                <a:Key>366615:7/14/2022 2:45:00 PM</a:Key>
+                                <a:OALogicalFlightID>366615</a:OALogicalFlightID>
+                                <a:DepartureDate>2022-07-14T00:00:00</a:DepartureDate>
+                                <a:Origin>ATH </a:Origin>
+                                <a:Destination>JFK </a:Destination>
+                                <a:OperatingCarrier>KL </a:OperatingCarrier>
+                                <a:OperatingFlightNumber>6030</a:OperatingFlightNumber>
+                                <a:DepartureTime>2022-07-14T14:45:00</a:DepartureTime>
+                                <a:Arrivaltime>2022-07-14T18:59:00</a:Arrivaltime>
+                                <a:OAFlightPersons>
+                                    <a:OAFlightPerson>
+                                        <a:Key>2:10214894</a:Key>
+                                        <a:RecordNumber>2</a:RecordNumber>
+                                        <a:PersonOrgID>10214894</a:PersonOrgID>
+                                        <a:ResSegStatus>1</a:ResSegStatus>
+                                    </a:OAFlightPerson>
+                                    <a:OAFlightPerson>
+                                        <a:Key>5:10214895</a:Key>
+                                        <a:RecordNumber>5</a:RecordNumber>
+                                        <a:PersonOrgID>10214895</a:PersonOrgID>
+                                        <a:ResSegStatus>1</a:ResSegStatus>
+                                    </a:OAFlightPerson>
+                                </a:OAFlightPersons>
+                            </a:OAFlight>
+                            <a:OAFlight>
+                                <a:Key>366616:7/14/2022 8:45:00 PM</a:Key>
+                                <a:OALogicalFlightID>366616</a:OALogicalFlightID>
+                                <a:DepartureDate>2022-07-14T00:00:00</a:DepartureDate>
+                                <a:Origin>JFK </a:Origin>
+                                <a:Destination>SAN </a:Destination>
+                                <a:OperatingCarrier>DL </a:OperatingCarrier>
+                                <a:OperatingFlightNumber>2977</a:OperatingFlightNumber>
+                                <a:DepartureTime>2022-07-14T20:45:00</a:DepartureTime>
+                                <a:Arrivaltime>2022-07-14T23:59:00</a:Arrivaltime>
+                                <a:OAFlightPersons>
+                                    <a:OAFlightPerson>
+                                        <a:Key>3:10214894</a:Key>
+                                        <a:RecordNumber>3</a:RecordNumber>
+                                        <a:PersonOrgID>10214894</a:PersonOrgID>
+                                        <a:ResSegStatus>1</a:ResSegStatus>
+                                    </a:OAFlightPerson>
+                                    <a:OAFlightPerson>
+                                        <a:Key>6:10214895</a:Key>
+                                        <a:RecordNumber>6</a:RecordNumber>
+                                        <a:PersonOrgID>10214895</a:PersonOrgID>
+                                        <a:ResSegStatus>1</a:ResSegStatus>
+                                    </a:OAFlightPerson>
+                                </a:OAFlightPersons>
+                            </a:OAFlight>
+                        </a:OAFlights>
+                    </a:Airline>
+                </a:Airlines>               
+                <a:Exceptions xmlns:b="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions">
+                    <b:ExceptionInformation.Exception>
+                        <b:ExceptionCode>0</b:ExceptionCode>
+                        <b:ExceptionDescription>Successful Transaction</b:ExceptionDescription>
+                        <b:ExceptionSource>RetrievePNR</b:ExceptionSource>
+                        <b:ExceptionLevel>Success</b:ExceptionLevel>
+                    </b:ExceptionInformation.Exception>
+                </a:Exceptions>
+            </RetrievePNRResult>
+        </RetrievePNRResponse>
+    </s:Body>
+</s:Envelope>

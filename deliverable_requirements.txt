@@ -1,0 +1,41 @@
+You are provided with a pool of reservations. These reservations are interline bookings. 
+Passengers in these bookings come from abroad to Athens, then continue their trip domestically and in some cases fly from Athens back to their origin.
+
+
+A web service implemented in node.js is needed that will provide the following information:
+
+1) All reservations that do not meet the Minimum Connection Time. MCT is the minimum allowed time between the arrival of one flight and the departure of the next flight.
+   MCT for our example is 2.5 hours. We need to check which reservations have less than 2.5h MCT for their connection in ATH (arriving in ATH and then travel to domestic route or/and arriving to ATH and then travel abroad).  
+
+2) Information about the domestic flight (operated by THE AIRLINE) can be found in the LogicalFlight* element and information about the interline (operated by another airline) can be found in the OAFlights* element.
+
+
+The service must calculate the difference between the arrival time in ATH and the departure time from ATH for every route and store the information in an SQL database.  The information to be stored is the following: 
+- PNR (the name of the file),
+- Domestic Departure Airport,
+- Domestic Flight Number, 
+- ATH Arrival DateTime,
+- Interline Operating Carrier,
+- Interline Flight Number,
+- Interline Arrival Station,
+- Interline Departure DateTime,
+- Time Diff in minutes
+
+
+The web service should consist of 2 endpoints:
+-- Endpoint that returns a JSON array with all the routes that don’t meet the MCT
+-- Endpoint that returns a JSON array with all interline carriers and the number of their appearance (bookings)
+-- Finally, these endpoints should be accessed only with an API key.
+
+
+UI
+A simple dashboard must be implemented that will display the information provided from the endpoints you implemented before. 
+You can use plain html+css+js or any js framework and/or css librady. 
+
+
+NOTES
+
+* Interline is an airline relationship that allows an airline to sell services to a customer that are provided by another airlineDomestic is a route that both origin and destination are Greek airports and international is a route that at least one of airports is not Greek.
+
+* LogicalFlight consists of physical flights and represents the origin-destination without the intermediate stops.PhysicalFlight has information about the actual flight from one airport to another. 
+* For example, if a ticket is booked from Chania to London with a stop in Athens, then the logical flight is Chania-London containing 2 physical flights. One physical flight from Chania to Athens and another one from Athens to London.

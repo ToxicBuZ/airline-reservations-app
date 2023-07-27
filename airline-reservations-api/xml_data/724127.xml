@@ -1,0 +1,249 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Body>
+        <RetrievePNRResponse xmlns="http://tempuri.org/">
+            <RetrievePNRResult xmlns:a="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"
+                xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                <a:Key>299:724127</a:Key>
+                <a:SeriesNumber>299</a:SeriesNumber>
+                <a:ConfirmationNumber>724127</a:ConfirmationNumber>
+                <a:BookingAgent>gds</a:BookingAgent>
+                <a:CRSCode/>
+                <a:TravelGroupID>0</a:TravelGroupID>
+                <a:IATANumber>xxxx</a:IATANumber>
+                <a:ExternalAppID/>
+                <a:WebBookingID/>
+                <a:PromotionalID>0</a:PromotionalID>
+                <a:PromotionalCode i:nil="true"/>
+                <a:RecieptLanguageID>0</a:RecieptLanguageID>
+                <a:ReservationCurrency>EUR</a:ReservationCurrency>
+                <a:ProfileID>-9223372036854775808</a:ProfileID>
+                <a:PNRPin>4263680</a:PNRPin>
+                <a:BookDate>2022-04-07T14:32:24</a:BookDate>
+                <a:ReservationType>STANDARD</a:ReservationType>
+                <a:TodaysDate>2022-09-29T09:57:06.1117214+00:00</a:TodaysDate>
+                <a:LastModified>2022-04-07T14:32:24</a:LastModified>
+                <a:ReservationExpirationDate>0001-01-01T00:00:00</a:ReservationExpirationDate>
+                <a:CorporationID/>
+                <a:SecurityGuid/>
+                <a:HasTickets>true</a:HasTickets>
+                <a:ValuePackageData i:nil="true"/>
+                <a:UserIPAddress i:nil="true"/>
+                <a:ManageBookingAgent i:nil="true"/>
+                <a:HistoricConfirmationNum/>
+                <a:Cabin>ECONOMY</a:Cabin>
+                <a:ReservationBalance>83.30</a:ReservationBalance>
+                <a:ChangeFee>0</a:ChangeFee>
+                <a:LogicalFlightCount>2</a:LogicalFlightCount>
+                <a:ActivePassengerCount>1</a:ActivePassengerCount>
+                <a:BalancedReservation>true</a:BalancedReservation>
+                <a:ReservationFulfillmentRequiredByGMT>2022-04-14T14:32:24</a:ReservationFulfillmentRequiredByGMT>
+                <a:ReservationFulfillmentRequiredByODT>2022-04-14T17:32:24</a:ReservationFulfillmentRequiredByODT>
+                <a:Airlines>
+                    <a:Airline>
+                        <a:Key i:nil="true"/>
+                        <a:LogicalFlight>
+                            <a:LogicalFlight>
+                                <a:Key>1157877:8/28/2022 12:30:00 PM</a:Key>
+                                <a:RecordNumber>0</a:RecordNumber>
+                                <a:LogicalFlightID>1157877</a:LogicalFlightID>
+                                <a:DepartureDate>2022-08-28T00:00:00</a:DepartureDate>
+                                <a:Origin>ATH </a:Origin>
+                                <a:OriginDefaultTerminal/>
+                                <a:OriginName>Eleftherios Venizelos Airport</a:OriginName>
+                                <a:Destination>JNX </a:Destination>
+                                <a:DestinationDefaultTerminal/>
+                                <a:DestinationName>Naxos Airport</a:DestinationName>
+                                <a:OriginMetroGroup>ATH </a:OriginMetroGroup>
+                                <a:DestinationMetroGroup>JNX </a:DestinationMetroGroup>
+                                <a:SellingCarrier>GQ </a:SellingCarrier>
+                                <a:OperatingCarrier>GQ </a:OperatingCarrier>
+                                <a:OperatingFlightNumber>402</a:OperatingFlightNumber>
+                                <a:DepartureTime>2022-08-28T12:30:00</a:DepartureTime>
+                                <a:Arrivaltime>2022-08-28T13:10:00</a:Arrivaltime>
+                                <a:PackageItemID>-2147483648</a:PackageItemID>
+                                <a:PackageItemName i:nil="true"/>
+                                <a:PackageItemDescription i:nil="true"/>
+                                <a:PackageItemBookDate>0001-01-01T00:00:00</a:PackageItemBookDate>
+                                <a:PackageItemStartDate>0001-01-01T00:00:00</a:PackageItemStartDate>
+                                <a:PackageItemEndDate>0001-01-01T00:00:00</a:PackageItemEndDate>
+                                <a:VendorId>-2147483648</a:VendorId>
+                                <a:VendorName i:nil="true"/>
+                                <a:Active>true</a:Active>
+                                <a:VendorDescription i:nil="true"/>
+                                <a:UIDisplayValue>-2147483648</a:UIDisplayValue>
+                                <a:PhysicalFlights>
+                                    <a:PhysicalFlight>
+                                        <a:Key>1157877:204115:8/28/2022 12:30:00 PM</a:Key>
+                                        <a:RecordNumber>0</a:RecordNumber>
+                                        <a:DestinationDefaultTerminal/>
+                                        <a:PhysicalFlightID>204115</a:PhysicalFlightID>
+                                        <a:LogicalFlightID>1157877</a:LogicalFlightID>
+                                        <a:CarrierCode>GQ </a:CarrierCode>
+                                        <a:CarrierName/>
+                                        <a:FlightNumber>402</a:FlightNumber>
+                                        <a:FlightOrder>1</a:FlightOrder>
+                                        <a:DepartureDate>2022-08-28T12:30:00</a:DepartureDate>
+                                        <a:Origin>ATH </a:Origin>
+                                        <a:OriginDefaultTerminal/>
+                                        <a:OriginName>Eleftherios Venizelos Airport</a:OriginName>
+                                        <a:Destination>JNX </a:Destination>
+                                        <a:DestinationName>Naxos Airport</a:DestinationName>
+                                        <a:OriginMetroGroup>ATH</a:OriginMetroGroup>
+                                        <a:DestinationMetroGroup>JNX</a:DestinationMetroGroup>
+                                        <a:SellingCarrier>GQ </a:SellingCarrier>
+                                        <a:OperatingCarrier>GQ</a:OperatingCarrier>
+                                        <a:OperatingFlightNumber>402</a:OperatingFlightNumber>
+                                        <a:DepartureTime>2022-08-28T12:30:00</a:DepartureTime>
+                                        <a:Arrivaltime>2022-08-28T13:10:00</a:Arrivaltime>
+                                        <a:FlightDuration>2400</a:FlightDuration>
+                                        <a:Trip>-2147483648</a:Trip>
+                                        <a:Gate/>
+                                        <a:TotalWeight>0</a:TotalWeight>
+                                        <a:UIDisplayValue>-2147483648</a:UIDisplayValue>
+                                        <a:Active>false</a:Active>
+                                        <a:Customers>
+                                            <a:Customer>
+                                                <a:Key>de72bd92-ea9d-41c3-a999-f2c197585087</a:Key>
+                                                <a:AirlinePersons>                                                   
+                                                </a:AirlinePersons>
+                                            </a:Customer>
+                                        </a:Customers>
+                                        <a:FromTerminal/>
+                                        <a:ToTerminal/>
+                                        <a:AirCraftType>AT5</a:AirCraftType>
+                                        <a:AirCraftDescription>ATR42 500</a:AirCraftDescription>
+                                        <a:UTCDepartureOffset>3</a:UTCDepartureOffset>
+                                        <a:UTCArrivalOffset>3</a:UTCArrivalOffset>
+                                    </a:PhysicalFlight>
+                                </a:PhysicalFlights>
+                            </a:LogicalFlight>
+                            <a:LogicalFlight>
+                                <a:Key>1516312:9/12/2022 8:55:00 AM</a:Key>
+                                <a:RecordNumber>0</a:RecordNumber>
+                                <a:LogicalFlightID>1516312</a:LogicalFlightID>
+                                <a:DepartureDate>2022-09-12T00:00:00</a:DepartureDate>
+                                <a:Origin>JNX </a:Origin>
+                                <a:OriginDefaultTerminal/>
+                                <a:OriginName>Naxos Airport</a:OriginName>
+                                <a:Destination>ATH </a:Destination>
+                                <a:DestinationDefaultTerminal/>
+                                <a:DestinationName>Eleftherios Venizelos Airport</a:DestinationName>
+                                <a:OriginMetroGroup>JNX </a:OriginMetroGroup>
+                                <a:DestinationMetroGroup>ATH </a:DestinationMetroGroup>
+                                <a:SellingCarrier>GQ </a:SellingCarrier>
+                                <a:OperatingCarrier>GQ </a:OperatingCarrier>
+                                <a:OperatingFlightNumber>409</a:OperatingFlightNumber>
+                                <a:DepartureTime>2022-09-12T08:55:00</a:DepartureTime>
+                                <a:Arrivaltime>2022-09-12T09:35:00</a:Arrivaltime>
+                                <a:PackageItemID>-2147483648</a:PackageItemID>
+                                <a:PackageItemName i:nil="true"/>
+                                <a:PackageItemDescription i:nil="true"/>
+                                <a:PackageItemBookDate>0001-01-01T00:00:00</a:PackageItemBookDate>
+                                <a:PackageItemStartDate>0001-01-01T00:00:00</a:PackageItemStartDate>
+                                <a:PackageItemEndDate>0001-01-01T00:00:00</a:PackageItemEndDate>
+                                <a:VendorId>-2147483648</a:VendorId>
+                                <a:VendorName i:nil="true"/>
+                                <a:Active>true</a:Active>
+                                <a:VendorDescription i:nil="true"/>
+                                <a:UIDisplayValue>-2147483648</a:UIDisplayValue>
+                                <a:PhysicalFlights>
+                                    <a:PhysicalFlight>
+                                        <a:Key>1516312:218008:9/12/2022 8:55:00 AM</a:Key>
+                                        <a:RecordNumber>0</a:RecordNumber>
+                                        <a:DestinationDefaultTerminal/>
+                                        <a:PhysicalFlightID>218008</a:PhysicalFlightID>
+                                        <a:LogicalFlightID>1516312</a:LogicalFlightID>
+                                        <a:CarrierCode>GQ </a:CarrierCode>
+                                        <a:CarrierName/>
+                                        <a:FlightNumber>409</a:FlightNumber>
+                                        <a:FlightOrder>1</a:FlightOrder>
+                                        <a:DepartureDate>2022-09-12T08:55:00</a:DepartureDate>
+                                        <a:Origin>JNX </a:Origin>
+                                        <a:OriginDefaultTerminal/>
+                                        <a:OriginName>Naxos Airport</a:OriginName>
+                                        <a:Destination>ATH </a:Destination>
+                                        <a:DestinationName>Eleftherios Venizelos Airport</a:DestinationName>
+                                        <a:OriginMetroGroup>JNX</a:OriginMetroGroup>
+                                        <a:DestinationMetroGroup>ATH</a:DestinationMetroGroup>
+                                        <a:SellingCarrier>GQ </a:SellingCarrier>
+                                        <a:OperatingCarrier>GQ</a:OperatingCarrier>
+                                        <a:OperatingFlightNumber>409</a:OperatingFlightNumber>
+                                        <a:DepartureTime>2022-09-12T08:55:00</a:DepartureTime>
+                                        <a:Arrivaltime>2022-09-12T09:35:00</a:Arrivaltime>
+                                        <a:FlightDuration>2400</a:FlightDuration>
+                                        <a:Trip>-2147483648</a:Trip>
+                                        <a:Gate/>
+                                        <a:TotalWeight>0</a:TotalWeight>
+                                        <a:UIDisplayValue>-2147483648</a:UIDisplayValue>
+                                        <a:Active>true</a:Active>
+                                        <a:Customers>
+                                            <a:Customer>
+                                                <a:Key>5702e38b-9f51-4c12-b1f5-823b58c558ec</a:Key>
+                                                <a:AirlinePersons>                                                    
+                                                </a:AirlinePersons>
+                                            </a:Customer>
+                                        </a:Customers>
+                                        <a:FromTerminal/>
+                                        <a:ToTerminal/>
+                                        <a:AirCraftType>AT5</a:AirCraftType>
+                                        <a:AirCraftDescription>ATR42 500</a:AirCraftDescription>
+                                        <a:UTCDepartureOffset>3</a:UTCDepartureOffset>
+                                        <a:UTCArrivalOffset>3</a:UTCArrivalOffset>
+                                    </a:PhysicalFlight>
+                                </a:PhysicalFlights>
+                            </a:LogicalFlight>
+                        </a:LogicalFlight>
+                        <a:OAFlights>
+                            <a:OAFlight>
+                                <a:Key>330313:8/28/2022 6:20:00 AM</a:Key>
+                                <a:OALogicalFlightID>330313</a:OALogicalFlightID>
+                                <a:DepartureDate>2022-08-28T00:00:00</a:DepartureDate>
+                                <a:Origin>DUS </a:Origin>
+                                <a:Destination>ATH </a:Destination>
+                                <a:OperatingCarrier>DE </a:OperatingCarrier>
+                                <a:OperatingFlightNumber>1018</a:OperatingFlightNumber>
+                                <a:DepartureTime>2022-08-28T06:20:00</a:DepartureTime>
+                                <a:Arrivaltime>2022-08-28T10:15:00</a:Arrivaltime>
+                                <a:OAFlightPersons>
+                                    <a:OAFlightPerson>
+                                        <a:Key>1:9106307</a:Key>
+                                        <a:RecordNumber>1</a:RecordNumber>
+                                        <a:PersonOrgID>9106307</a:PersonOrgID>
+                                        <a:ResSegStatus>1</a:ResSegStatus>
+                                    </a:OAFlightPerson>
+                                </a:OAFlightPersons>
+                            </a:OAFlight>
+                            <a:OAFlight>
+                                <a:Key>323259:9/12/2022 11:55:00 AM</a:Key>
+                                <a:OALogicalFlightID>323259</a:OALogicalFlightID>
+                                <a:DepartureDate>2022-09-12T00:00:00</a:DepartureDate>
+                                <a:Origin>ATH </a:Origin>
+                                <a:Destination>DUS </a:Destination>
+                                <a:OperatingCarrier>DE </a:OperatingCarrier>
+                                <a:OperatingFlightNumber>1019</a:OperatingFlightNumber>
+                                <a:DepartureTime>2022-09-12T11:55:00</a:DepartureTime>
+                                <a:Arrivaltime>2022-09-12T14:05:00</a:Arrivaltime>
+                                <a:OAFlightPersons>
+                                    <a:OAFlightPerson>
+                                        <a:Key>4:9106307</a:Key>
+                                        <a:RecordNumber>4</a:RecordNumber>
+                                        <a:PersonOrgID>9106307</a:PersonOrgID>
+                                        <a:ResSegStatus>1</a:ResSegStatus>
+                                    </a:OAFlightPerson>
+                                </a:OAFlightPersons>
+                            </a:OAFlight>
+                        </a:OAFlights>
+                    </a:Airline>
+                </a:Airlines>                
+                <a:Exceptions xmlns:b="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions">
+                    <b:ExceptionInformation.Exception>
+                        <b:ExceptionCode>0</b:ExceptionCode>
+                        <b:ExceptionDescription>Successful Transaction</b:ExceptionDescription>
+                        <b:ExceptionSource>RetrievePNR</b:ExceptionSource>
+                        <b:ExceptionLevel>Success</b:ExceptionLevel>
+                    </b:ExceptionInformation.Exception>
+                </a:Exceptions>
+            </RetrievePNRResult>
+        </RetrievePNRResponse>
+    </s:Body>
+</s:Envelope>

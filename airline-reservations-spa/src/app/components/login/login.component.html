@@ -1,3 +1,14 @@
-<p>login works!</p>
+<div id="login-container">
+  <div id="login-header">
+    <h1 id="login-card-header">Airline Reservations App</h1>
+    <input
+      pInputText
+      id="login-input"
+      placeholder="Please enter your API key..."
+      type="text"
+    />
+    <p-button label="Submit" (onClick)="onSubmit()"></p-button>
+  </div>
+</div>
 
-<p-button label="Submit" icon="pi pi-check" iconPos="right"></p-button>
+<p-toast position="bottom-right"></p-toast>
