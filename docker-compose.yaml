@@ -1,11 +1,10 @@
 version: "3.5"
-
 services:
   postgres:
     container_name: postgres_container
     environment:
-      POSTGRES_USER: airline-reservations-api
-      POSTGRES_PASSWORD: a1rLiN3r3z3rV@ti0n$aPP
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
       POSTGRES_DB: postgres
     image: postgres
     ports:

@@ -1,19 +1,28 @@
 <div id="login-container">
-  <p-card>
-    <h1 id="login-card-header">Airline Info</h1>
-    <input
-      pInputText
-      id="login-card-input"
-      placeholder="Please enter your API key..."
-      type="text"
-    />
-    <p-button label="Submit" (onClick)="onSubmit()"></p-button>
-    <h6 id="login-card-footer">
-      <a href="https://github.com/ToxicBuZ" target="_blank"
-        >by Emmanouil Chondrakis</a
-      >
-    </h6>
-  </p-card>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <p-card>
+      <h1 id="login-card-header">Airline Info</h1>
+      <input
+        pInputText
+        trim
+        class="inputfield"
+        formControlName="apiKey"
+        id="login-card-input"
+        placeholder="Please enter your API key..."
+        type="text"
+      />
+      <p-button
+        label="Submit"
+        [disabled]="!form.valid"
+        (onClick)="onSubmit()"
+      ></p-button>
+      <h6 id="login-card-footer">
+        <a href="https://github.com/ToxicBuZ" target="_blank"
+          >by Emmanouil Chondrakis</a
+        >
+      </h6>
+    </p-card>
+  </form>
 </div>
 
 <p-toast position="top-right"></p-toast>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { InterlineCarrier } from 'src/app/models/InterlineCarrier.model';
-import { NonMctRoute } from 'src/app/models/NonMctRoute.model';
+import { InterlineCarrier } from 'src/app/models/interlineCarriers.model';
+import { NonMctRoute } from 'src/app/models/nonMctRoutes.model';
 
 @Component({
   selector: 'app-dashboard',
@@ -32,7 +32,7 @@ export class DashboardComponent {
         planeId: 'SKFPPOSS03',
       },
       {
-        name: 'Aegean Airlines',
+        name: 'Aegean',
         bookings: 6,
         hq: 'GR',
         planeId: 'AEGSO02213',

@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
-
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MessageService } from 'primeng/api';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +17,9 @@ import { PrimengModule } from './primeng.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     PrimengModule,
   ],
   providers: [MessageService],
