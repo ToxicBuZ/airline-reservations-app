@@ -9,13 +9,15 @@ import { User } from '../models/user.model';
 export class UserService {
   constructor(private httpClient: HttpClient, private router: Router) {}
 
-  public login(apiKey: string): Observable<User> {
+  public verifyApiKey(apiKey: string): Observable<User> {
     return this.httpClient
-      .post(`${environment.API_URL}/api/login`, { ApiKey: apiKey })
+      .get<User>(`${environment.API_URL}user/verify/${apiKey}`)
       .pipe(
-        map((userInfos: User) => {
-          localStorage.setItem('user', JSON.stringify(userInfos));
-          return userInfos;
+        map((data: User) => {
+          localStorage.setItem('user', JSON.stringify(data));
+          return {
+            ...data,
+          };
         }),
         catchError((error) => {
           console.error(error);

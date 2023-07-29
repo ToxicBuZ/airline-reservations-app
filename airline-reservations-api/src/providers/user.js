@@ -1,6 +1,11 @@
 export default class UserProvider {
-  sendPong() {
-    console.log('pong');
-    return 200;
+  static verifyApiKey(apiKey) {
+    if (apiKey === process.env.API_KEY) {
+      return {
+        apiKey: apiKey,
+        isApiKeyVerified: true
+      };
+    }
+    return 403;
   }
 }

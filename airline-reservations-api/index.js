@@ -1,15 +1,16 @@
-import userRoute from './src/routes/user.js';
 import express from 'express';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import userRoute from './src/routes/user';
 
+dotenv.config();
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('BOOM');
-});
-
+app.use(cors());
 app.use(express.json());
 
+/* Routes */
 app.use('/user', userRoute);
 
 app.listen(port, () => {

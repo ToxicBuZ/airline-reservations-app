@@ -36,7 +36,16 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   public onSubmit() {
-    console.log(this.form.get('apiKey')?.value);
-    this.alertService.showSuccessToaster('Api Key Logged');
+    this.subscriptions.add(
+      this.userService
+        .verifyApiKey(this.form.get('apiKey')?.value)
+        .subscribe((result) => {
+          if (Object.keys(result).length === 0) {
+            this.alertService.showErrorToaster('Incorrect Api Key');
+          } else {
+            this.router.navigate(['/']);
+          }
+        })
+    );
   }
 }
