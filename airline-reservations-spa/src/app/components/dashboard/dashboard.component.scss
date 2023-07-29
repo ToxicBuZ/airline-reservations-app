@@ -5,3 +5,10 @@
 :host ::ng-deep .p-tabview-title:hover {
   color: #d60673;
 }
+
+#dashboard-footer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}

@@ -9,6 +9,11 @@ import { User } from '../models/user.model';
 export class UserService {
   constructor(private httpClient: HttpClient, private router: Router) {}
 
+  public logout(): void {
+    localStorage.removeItem('user');
+    this.router.navigate(['/login']);
+  }
+
   public verifyApiKey(apiKey: string): Observable<User> {
     return this.httpClient
       .get<User>(`${environment.API_URL}user/verify/${apiKey}`)
@@ -24,10 +29,5 @@ export class UserService {
           return of({} as User);
         })
       );
-  }
-
-  public logout(): void {
-    localStorage.removeItem('user');
-    this.router.navigate(['/login']);
   }
 }

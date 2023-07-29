@@ -6,6 +6,6 @@ export default class UserProvider {
         isApiKeyVerified: true
       };
     }
-    return 403;
+    throw new Error('FORBIDDEN');
   }
 }

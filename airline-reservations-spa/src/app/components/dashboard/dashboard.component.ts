@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { InterlineCarrier } from 'src/app/models/interlineCarriers.model';
 import { NonMctRoute } from 'src/app/models/nonMctRoutes.model';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,8 +13,11 @@ import { NonMctRoute } from 'src/app/models/nonMctRoutes.model';
 export class DashboardComponent {
   public interlineCarriersList: InterlineCarrier[];
   public nonMctRoutesList: NonMctRoute[];
+  public showSpinner: boolean = true;
 
-  constructor() {
+  private subscriptions: Subscription;
+
+  constructor(private router: Router, private userService: UserService) {
     this.interlineCarriersList = [
       {
         name: 'RyanAir',
@@ -64,5 +70,16 @@ export class DashboardComponent {
         airline: 'SkyExpress',
       },
     ];
+
+    this.subscriptions = new Subscription();
+  }
+  ngOnInit(): void {}
+
+  ngOnDestroy(): void {
+    this.subscriptions.unsubscribe();
+  }
+
+  public logout() {
+    this.userService.logout();
   }
 }

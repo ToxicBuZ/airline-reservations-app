@@ -5,12 +5,12 @@ const userRoute = express.Router();
 
 userRoute.get('/verify/:apiKey', (req, res) => {
   const apiKey = req.params.apiKey;
-  res.send(
-    UserProvider.verifyApiKey(apiKey).catch((err) => {
-      console.error(err);
-      res.status(403).send();
-    })
-  );
+  try {
+    res.send(UserProvider.verifyApiKey(apiKey));
+  } catch (e) {
+    console.error(e);
+    res.status(403).send();
+  }
 });
 
 export default userRoute;
