@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+
+import { zip } from 'rxjs';
+
+import { AirlineService } from 'src/app/services/airline.service';
 import { InterlineCarrier } from 'src/app/models/interlineCarriers.model';
 import { NonMctRoute } from 'src/app/models/nonMctRoutes.model';
 import { UserService } from 'src/app/services/user.service';
@@ -10,73 +12,49 @@ import { UserService } from 'src/app/services/user.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
   public interlineCarriersList: InterlineCarrier[];
   public nonMctRoutesList: NonMctRoute[];
-  public showSpinner: boolean = true;
+  public showSpinner: boolean = false;
 
-  private subscriptions: Subscription;
+  private user: any;
 
-  constructor(private router: Router, private userService: UserService) {
-    this.interlineCarriersList = [
-      {
-        name: 'RyanAir',
-        bookings: 5,
-        hq: 'IE',
-        planeId: 'DF123JJK',
-      },
-      {
-        name: 'Emirates',
-        bookings: 2,
-        hq: 'QT',
-        planeId: 'KKT3003SA',
-      },
-      {
-        name: 'EasyJet',
-        bookings: 4,
-        hq: 'UK',
-        planeId: 'SKFPPOSS03',
-      },
-      {
-        name: 'Aegean',
-        bookings: 6,
-        hq: 'GR',
-        planeId: 'AEGSO02213',
-      },
-    ];
-    this.nonMctRoutesList = [
-      {
-        routeFrom: 'CHQ',
-        routeTo: 'ATH',
-        mctNumber: 1,
-        airline: 'SkyExpress',
-      },
-      {
-        routeFrom: 'CHQ',
-        routeTo: 'SKG',
-        mctNumber: 1.5,
-        airline: 'SkyExpress',
-      },
-      {
-        routeFrom: 'ATH',
-        routeTo: 'CHQ',
-        mctNumber: 1,
-        airline: 'SkyExpress',
-      },
-      {
-        routeFrom: 'SKG',
-        routeTo: 'CHQ',
-        mctNumber: 2,
-        airline: 'SkyExpress',
-      },
-    ];
-
-    this.subscriptions = new Subscription();
+  constructor(
+    private airlineService: AirlineService,
+    private userService: UserService
+  ) {
+    this.user = localStorage.getItem('user');
+    this.interlineCarriersList = [];
+    this.nonMctRoutesList = [];
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (this.user) {
+      this.showSpinner = true;
 
-  ngOnDestroy(): void {
-    this.subscriptions.unsubscribe();
+      const nonMctRoutesObservable$ = this.airlineService.readNonMctRoutes(
+        JSON.parse(this.user).apiKey
+      );
+
+      const interlineCarriersObservable$ =
+        this.airlineService.readInterlineCarriers(JSON.parse(this.user).apiKey);
+
+      const airlineObservable$ = zip(
+        nonMctRoutesObservable$,
+        interlineCarriersObservable$
+      );
+
+      airlineObservable$.subscribe(
+        (list: [NonMctRoute[], InterlineCarrier[]]) => {
+          /* Timeout of 3 seconds to imitate API call */
+          setTimeout(() => {
+            this.showSpinner = false;
+          }, 3000);
+
+          this.nonMctRoutesList = list[0];
+          this.interlineCarriersList = list[1];
+        }
+      );
+    }
   }
 
   public logout() {

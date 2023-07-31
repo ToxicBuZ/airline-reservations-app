@@ -1,8 +1,9 @@
-export default function assignValuesToKeys(object, values) {
+/* This method iterates over an object and assignes the data in the equivalant valuesArray index as values */
+export function assignValuesToKeys(object, valuesArray) {
+  let counter = 0;
   for (const key in object) {
-    let counter = 0;
-    object[key] = values[counter];
-    counter++;
+    object[key] = valuesArray[counter];
+    counter = counter + 1;
   }
   return object;
 }

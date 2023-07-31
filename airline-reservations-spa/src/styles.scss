@@ -1,4 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@keyframes custom-progress-spinner-color {
+  100%,
+  0% {
+    stroke: #d60673;
+  }
+  40% {
+    stroke: #d60673;
+  }
+  66% {
+    stroke: #d60673;
+  }
+  80%,
+  90% {
+    stroke: #d60673;
+  }
+}
+
+:host ::ng-deep .custom-spinner .p-progress-spinner-circle {
+  animation: custom-progress-spinner-dash 1.5s ease-in-out infinite,
+    custom-progress-spinner-color 6s ease-in-out infinite;
+}
 
 html {
   background-color: #183a68;
@@ -7,4 +28,10 @@ html {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.spinner-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }

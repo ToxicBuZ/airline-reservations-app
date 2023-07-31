@@ -1,4 +1,4 @@
-<div id="login-container">
+<div id="login-container" *ngIf="!showSpinner">
   <form autocomplete="off" [formGroup]="form" (ngSubmit)="onSubmit()">
     <p-card>
       <h1 id="login-card-header">Airline Info</h1>
@@ -19,6 +19,10 @@
       <h6 id="login-card-footer">by Emmanouil Chondrakis</h6>
     </p-card>
   </form>
+</div>
+
+<div class="spinner-container" *ngIf="showSpinner">
+  <p-progressSpinner styleClass="custom-spinner"></p-progressSpinner>
 </div>
 
 <p-toast position="top-right"></p-toast>

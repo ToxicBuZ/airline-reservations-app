@@ -1,6 +1,7 @@
 export interface NonMctRoute {
-  routeFrom: string;
-  routeTo: string;
-  mctNumber: number;
-  airline: string;
+  domesticFlightNumber: string;
+  interlineFlightNumber: string;
+  pnr: string;
+  route: string;
+  timeDifferenceInMinutes: number;
 }

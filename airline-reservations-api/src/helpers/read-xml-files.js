@@ -1,7 +1,12 @@
+import { parseXml } from './parse-xml';
 import * as fs from 'fs';
-import parseXml from './parse-xml';
 
-export default async function readXmlFiles(fileTitles) {
+/*
+ * This method will accept an array of file titles
+ * It will read the files in the data folder
+ * and store the data in a files array
+ */
+export async function readXmlFiles(fileTitles) {
   let files = [];
   for (let i = 0; i < fileTitles.length; i++) {
     const file = await parseXml(

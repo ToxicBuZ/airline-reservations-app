@@ -1,7 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+
 import { Subscription } from 'rxjs';
+
 import { AlertService } from 'src/app/services/alert.service';
 import { FormService } from 'src/app/services/form.service';
 import { UserService } from 'src/app/services/user.service';
@@ -12,6 +14,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class LoginComponent implements OnInit, OnDestroy {
   public form: FormGroup;
+  public showSpinner: boolean = false;
 
   private subscriptions: Subscription;
 
@@ -36,11 +39,15 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   public onSubmit() {
+    this.showSpinner = true;
     this.subscriptions.add(
       this.userService
         .verifyApiKey(this.form.get('apiKey')?.value)
         .subscribe((result) => {
           if (Object.keys(result).length === 0) {
+            setTimeout(() => {
+              this.showSpinner = false;
+            }, 3000);
             this.alertService.showErrorToaster('Incorrect Api Key');
           } else {
             this.router.navigate(['/']);

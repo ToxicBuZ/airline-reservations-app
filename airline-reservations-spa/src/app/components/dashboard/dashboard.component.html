@@ -1,40 +1,27 @@
-<p-tabView>
+<p-tabView *ngIf="!showSpinner">
   <p-tabPanel header="Non MCT Routes">
     <p-table
       [value]="nonMctRoutesList"
       [showCurrentPageReport]="true"
       [tableStyle]="{ 'min-width': '50rem' }"
-      currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
     >
       <ng-template pTemplate="header">
         <tr>
-          <th style="width: 25%">Route From</th>
-          <th style="width: 25%">Route To</th>
-          <th style="width: 25%">MCT Number</th>
-          <th style="width: 25%">Airline</th>
+          <th style="width: 25%">Route</th>
+          <th style="width: 25%">PNR</th>
+          <th style="width: 25%">Domestic Flight Number</th>
+          <th style="width: 25%">Interline Flight Number</th>
+          <th style="width: 25%">Time Difference In Minutes</th>
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-nonMctRoute>
         <tr>
-          <td>{{ nonMctRoute.routeFrom }}</td>
-          <td>{{ nonMctRoute.routeTo }}</td>
-          <td>{{ nonMctRoute.mctNumber }}</td>
-          <td>{{ nonMctRoute.airline }}</td>
+          <td>{{ nonMctRoute.route }}</td>
+          <td>{{ nonMctRoute.pnr }}</td>
+          <td>{{ nonMctRoute.domesticFlightNumber }}</td>
+          <td>{{ nonMctRoute.interlineFlightNumber }}</td>
+          <td>{{ nonMctRoute.timeDifferenceInMinutes }}</td>
         </tr>
-      </ng-template>
-      <ng-template pTemplate="paginatorleft">
-        <p-button
-          type="button"
-          icon="pi pi-plus"
-          styleClass="p-button-text"
-        ></p-button>
-      </ng-template>
-      <ng-template pTemplate="paginatorright">
-        <p-button
-          type="button"
-          icon="pi pi-cloud"
-          styleClass="p-button-text"
-        ></p-button>
       </ng-template>
     </p-table>
   </p-tabPanel>
@@ -43,46 +30,31 @@
       [value]="interlineCarriersList"
       [showCurrentPageReport]="true"
       [tableStyle]="{ 'min-width': '50rem' }"
-      currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
     >
       <ng-template pTemplate="header">
         <tr>
-          <th style="width: 25%">Route From</th>
-          <th style="width: 25%">Route To</th>
-          <th style="width: 25%">MCT Number</th>
-          <th style="width: 25%">Airline</th>
+          <th style="width: 25%">Bookings</th>
+          <th style="width: 25%">Interline Operating Carrier</th>
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-interlineCarrier>
         <tr>
-          <td>{{ interlineCarrier.name }}</td>
           <td>{{ interlineCarrier.bookings }}</td>
-          <td>{{ interlineCarrier.hq }}</td>
-          <td>{{ interlineCarrier.planeId }}</td>
+          <td>{{ interlineCarrier.interlineOperatingCarrier }}</td>
         </tr>
-      </ng-template>
-      <ng-template pTemplate="paginatorleft">
-        <p-button
-          type="button"
-          icon="pi pi-plus"
-          styleClass="p-button-text"
-        ></p-button>
-      </ng-template>
-      <ng-template pTemplate="paginatorright">
-        <p-button
-          type="button"
-          icon="pi pi-cloud"
-          styleClass="p-button-text"
-        ></p-button>
       </ng-template>
     </p-table>
   </p-tabPanel>
 </p-tabView>
 
-<div id="dashboard-footer">
+<div id="dashboard-footer" *ngIf="!showSpinner">
   <p-button
     label="Logout"
     styleClass="p-button-danger"
     (onClick)="logout()"
   ></p-button>
+</div>
+
+<div class="spinner-container" *ngIf="showSpinner">
+  <p-progressSpinner styleClass="custom-spinner"></p-progressSpinner>
 </div>

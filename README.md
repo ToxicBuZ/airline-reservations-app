@@ -13,6 +13,7 @@ To create a docker container with a Postgres database run: docker-compose -f "do
 This project was generated with Express 4.16.1.
 
 Navigate to the airline-reservations-api directory.
+Stay on that directory as it is required for the file read method.
 
 ### To install necessary dependencies use the commands below.
 
@@ -24,11 +25,13 @@ Navigate to the airline-reservations-api directory.
 
 Then load http://localhost:3000/ in your browser to access the app.
 
+The API KEY can be found in the .env file.
+
 ## Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
 
-Navigate to the airline-reservations-spa directory then use {{ npm install }} to install dependencies.
+Navigate to the airline-reservations-spa directory then use {{ npm i }} to install dependencies.
 
 ## Development server
 

@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 })
 export class AuthGuard {
   constructor(private router: Router) {}
+
   canActivate(): boolean {
     if (this.isLoggedIn()) {
       return true;
