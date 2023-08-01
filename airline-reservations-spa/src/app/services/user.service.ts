@@ -4,12 +4,17 @@ import { Router } from '@angular/router';
 
 import { catchError, map, Observable, of } from 'rxjs';
 
+import { AlertService } from './alert.service';
 import { User } from '../models/user.model';
 import { environment } from 'src/environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
-  constructor(private httpClient: HttpClient, private router: Router) {}
+  constructor(
+    private alertService: AlertService,
+    private httpClient: HttpClient,
+    private router: Router
+  ) {}
 
   public logout(): void {
     localStorage.removeItem('user');
@@ -28,6 +33,9 @@ export class UserService {
         }),
         catchError((error) => {
           console.error(error);
+          this.alertService.showErrorToaster(
+            `${error.status}: ${error.statusText}`
+          );
           return of({} as User);
         })
       );

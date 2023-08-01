@@ -16,15 +16,10 @@ describe('LoginComponent', () => {
 
   const mockRouter = jasmine.createSpyObj('mockRouter', ['navigate']);
 
-  const mockAlertService = jasmine.createSpyObj('mockAlertService', [
-    'showErrorToaster',
-  ]);
-
   const mockForm = jasmine.createSpyObj('mockForm', ['get']);
 
   beforeEach(() => {
     component = new LoginComponent(
-      mockAlertService,
       mockFormService,
       mockRouter,
       mockUserService
@@ -35,12 +30,6 @@ describe('LoginComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
-  });
-
-  it('should display an error toaster when apiKey is wrong', () => {
-    mockUserService.verifyApiKey.and.returnValue(of({}));
-    component.onSubmit();
-    expect(mockAlertService.showErrorToaster).toHaveBeenCalled();
   });
 
   it('should navigate to the dashboard when login is successful', () => {

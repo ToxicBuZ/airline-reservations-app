@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 
 import { Subscription } from 'rxjs';
 
-import { AlertService } from 'src/app/services/alert.service';
 import { FormService } from 'src/app/services/form.service';
 import { UserService } from 'src/app/services/user.service';
 @Component({
@@ -19,7 +18,6 @@ export class LoginComponent implements OnInit, OnDestroy {
   private subscriptions: Subscription;
 
   constructor(
-    private alertService: AlertService,
     private formService: FormService,
     private router: Router,
     private userService: UserService
@@ -49,7 +47,6 @@ export class LoginComponent implements OnInit, OnDestroy {
             setTimeout(() => {
               this.showSpinner = false;
             }, 2000);
-            this.alertService.showErrorToaster('Incorrect Api Key');
           } else {
             this.router.navigate(['/']);
           }
