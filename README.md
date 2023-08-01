@@ -19,7 +19,7 @@ This project was generated with Express 4.16.1.
 - The `API_KEY` can be found in the .env file.
 - Run `npm test` to execute the unit tests via Jest.
 
-**Make sure the docker container is running, and then run the project from the `airline-reservations-api` directory.**
+Notes: **Make sure the docker container is running, and then run the project from the `airline-reservations-api` directory.**
 
 
 ### Frontend
