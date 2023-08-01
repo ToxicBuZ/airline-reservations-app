@@ -30,11 +30,9 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     if (this.user) {
       this.showSpinner = true;
-      const nonMctRoutesObservable$ = this.airlineService.readNonMctRoutes(
-        JSON.parse(this.user).apiKey
-      );
+      const nonMctRoutesObservable$ = this.airlineService.readNonMctRoutes();
       const interlineCarriersObservable$ =
-        this.airlineService.readInterlineCarriers(JSON.parse(this.user).apiKey);
+        this.airlineService.readInterlineCarriers();
       const airlineObservable$ = zip(
         nonMctRoutesObservable$,
         interlineCarriersObservable$

@@ -11,10 +11,10 @@ import { environment } from 'src/environments/environment';
 export class AirlineService {
   constructor(private httpClient: HttpClient) {}
 
-  public readInterlineCarriers(apiKey: string): Observable<InterlineCarrier[]> {
+  public readInterlineCarriers(): Observable<InterlineCarrier[]> {
     return this.httpClient
       .get<InterlineCarrier[]>(
-        `${environment.API_URL}reservations/interline-carriers/${apiKey}`
+        `${environment.API_URL}reservations/interline-carriers`
       )
       .pipe(
         map((data: InterlineCarrier[]) => {
@@ -27,11 +27,9 @@ export class AirlineService {
       );
   }
 
-  public readNonMctRoutes(apiKey: string): Observable<NonMctRoute[]> {
+  public readNonMctRoutes(): Observable<NonMctRoute[]> {
     return this.httpClient
-      .get<NonMctRoute[]>(
-        `${environment.API_URL}reservations/non-mct-routes/${apiKey}`
-      )
+      .get<NonMctRoute[]>(`${environment.API_URL}reservations/non-mct-routes`)
       .pipe(
         map((data: NonMctRoute[]) => {
           return data;

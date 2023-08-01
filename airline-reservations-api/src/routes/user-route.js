@@ -10,7 +10,9 @@ const db = new PostgresClient();
 
 userRoute.get('/verify/:apiKey', async (req, res) => {
   const apiKey = req.params.apiKey;
+
   const response = UserProvider.verifyApiKey(apiKey);
+
   if (response) {
     await XmlService.parseXmlFiles();
 
