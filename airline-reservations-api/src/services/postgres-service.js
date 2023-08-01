@@ -12,8 +12,4 @@ export class PostgresClient {
   async init() {
     return await this.client.connect();
   }
-
-  async disconnect() {
-    await this.client.end();
-  }
 }

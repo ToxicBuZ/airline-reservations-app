@@ -1,4 +1,4 @@
-/* Transforms the non mct routes array from SQL to the NonMctRoutes model of Angular */
+/* Transforms the non mct routes array from SQL rows to the NonMctRoutes model of Angular */
 export function transformNonMctRoutes(nonMctRoutes) {
   return nonMctRoutes.map((route) => {
     return {

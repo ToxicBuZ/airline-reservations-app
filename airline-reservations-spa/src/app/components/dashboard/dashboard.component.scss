@@ -1,3 +1,25 @@
+@keyframes custom-progress-spinner-color {
+  100%,
+  0% {
+    stroke: #d60673;
+  }
+  40% {
+    stroke: #d60673;
+  }
+  66% {
+    stroke: #d60673;
+  }
+  80%,
+  90% {
+    stroke: #d60673;
+  }
+}
+
+:host ::ng-deep .custom-spinner .p-progress-spinner-circle {
+  animation: custom-progress-spinner-dash 1.5s ease-in-out infinite,
+    custom-progress-spinner-color 6s ease-in-out infinite;
+}
+
 :host ::ng-deep .p-tabview-title {
   color: #183a68;
 }

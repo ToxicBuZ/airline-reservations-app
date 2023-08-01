@@ -17,9 +17,7 @@ describe('LoginComponent', () => {
   const mockRouter = jasmine.createSpyObj('mockRouter', ['navigate']);
 
   const mockAlertService = jasmine.createSpyObj('mockAlertService', [
-    'showToaster',
     'showErrorToaster',
-    'showWarningToaster',
   ]);
 
   const mockForm = jasmine.createSpyObj('mockForm', ['get']);
