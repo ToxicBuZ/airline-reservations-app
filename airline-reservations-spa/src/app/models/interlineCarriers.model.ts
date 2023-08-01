@@ -1,4 +1,4 @@
 export interface InterlineCarrier {
-  bookings: number;
+  bookings: string;
   interlineOperatingCarrier: string;
 }

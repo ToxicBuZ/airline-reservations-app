@@ -28,8 +28,8 @@ export class XmlService {
 
       await ReservationsProvider.createReservationsTable(db.client);
 
-      cleanJsonReservations.forEach((reservation) => {
-        ReservationsProvider.createReservations(db.client, reservation);
+      cleanJsonReservations.forEach(async (reservation) => {
+        await ReservationsProvider.createReservations(db.client, reservation);
       });
     }
   }

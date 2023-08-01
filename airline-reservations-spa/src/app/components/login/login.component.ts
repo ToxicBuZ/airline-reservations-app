@@ -45,9 +45,10 @@ export class LoginComponent implements OnInit, OnDestroy {
         .verifyApiKey(this.form.get('apiKey')?.value)
         .subscribe((result) => {
           if (Object.keys(result).length === 0) {
+            /* Timeout of 2 seconds to imitate API call */
             setTimeout(() => {
               this.showSpinner = false;
-            }, 3000);
+            }, 2000);
             this.alertService.showErrorToaster('Incorrect Api Key');
           } else {
             this.router.navigate(['/']);

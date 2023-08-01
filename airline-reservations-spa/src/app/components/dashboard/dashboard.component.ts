@@ -30,28 +30,23 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     if (this.user) {
       this.showSpinner = true;
-
       const nonMctRoutesObservable$ = this.airlineService.readNonMctRoutes(
         JSON.parse(this.user).apiKey
       );
-
       const interlineCarriersObservable$ =
         this.airlineService.readInterlineCarriers(JSON.parse(this.user).apiKey);
-
       const airlineObservable$ = zip(
         nonMctRoutesObservable$,
         interlineCarriersObservable$
       );
-
       airlineObservable$.subscribe(
-        (list: [NonMctRoute[], InterlineCarrier[]]) => {
-          /* Timeout of 3 seconds to imitate API call */
+        (results: [NonMctRoute[], InterlineCarrier[]]) => {
+          /* Timeout of 2 seconds to imitate API call */
           setTimeout(() => {
             this.showSpinner = false;
-          }, 3000);
-
-          this.nonMctRoutesList = list[0];
-          this.interlineCarriersList = list[1];
+          }, 2000);
+          this.nonMctRoutesList = results[0];
+          this.interlineCarriersList = results[1];
         }
       );
     }
