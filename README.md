@@ -15,12 +15,11 @@ Docker 4+, Angular 16, Express 4.16
 This project was generated with Express 4.16.1.
 
 - Navigate to the `airline-reservations-api` directory then use `npm i` to install dependencies.
-- To run the project use `npm start` then load `http://localhost:3000/` in your browser to access the app.
+- To run the project use `npm start`.
 - The `API_KEY` can be found in the .env file.
 - Run `npm test` to execute the unit tests via Jest.
 
 Notes: Make sure the docker container is running, and then run the project from the `airline-reservations-api` directory.
-
 
 ### Frontend
 
