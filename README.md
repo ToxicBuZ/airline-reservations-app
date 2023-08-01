@@ -4,10 +4,9 @@
 Docker 4+, Angular 16, Express 4.16
 
 ### Docker
-
 * To create a docker container with a Postgres database run: `docker-compose -f "docker-compose.yaml" up -d --build` on the terminal
 
-## Backend
+### Backend
 This project was generated with Express 4.16.1.
 
 * Navigate to the airline-reservations-api directory then use `npm i` to install dependencies.
@@ -16,7 +15,7 @@ This project was generated with Express 4.16.1.
 * The API KEY can be found in the .env file.
 * Run `npm test` to execute the unit tests via Jest.
 
-## Frontend
+### Frontend
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
 
 * Navigate to the airline-reservations-spa directory then use `npm i` to install dependencies.
